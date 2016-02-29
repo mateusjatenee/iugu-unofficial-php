@@ -1,3 +1,3 @@
 <?php
 
-require_once 'Iugu/Base.php';
+require __DIR__ . './../vendor/autoload.php';

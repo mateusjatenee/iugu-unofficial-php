@@ -1,0 +1,30 @@
+{
+    "name": "mateusjatenee/iugu-unofficial-api",
+    "description": "Biblioteca de integracao PHP Iugu",
+    "homepage": "https://mguimaraes.co",
+    "keywords": [
+      "iugu",
+      "pagamentos",
+      "api"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mateus Guimarães",
+            "email": "mateus.jatene@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0",
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+      "psr-4": {
+        "Iugu\\": "src/"
+      }
+    }
+}
+
