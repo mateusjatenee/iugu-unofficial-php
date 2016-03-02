@@ -18,14 +18,14 @@ class Base
         $this->client = new Client(['base_uri' => 'https://api.iugu.com/v1/']);
     }
 
-    public function create($data, $url)
+    public function post($url, $data)
     {
-        $response = $this->client->request('POST', $url, [
+        $request = $this->client->request('POST', $url, [
             'auth' => [$this->apiKey, ''],
             $data,
         ]);
 
-        return $response->getBody();
+        $response = json_decode($request->getBody());
     }
 
     public function get($url, $data = null)
@@ -33,8 +33,8 @@ class Base
         $request = $this->client->request('GET', $url, [
             'auth' => [$this->apiKey, ''],
         ]);
-        $result = json_decode($request->getBody(), true);
-        return $result;
+        $response = json_decode($request->getBody(), true);
+        return $response;
 
     }
 }
