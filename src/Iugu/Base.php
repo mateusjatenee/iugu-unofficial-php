@@ -1,6 +1,6 @@
 <?php
 
-namespace mateusjatenee;
+namespace mateusjatenee\Iugu;
 
 require __DIR__ . '/../vendor/autoload.php';
 
