@@ -37,4 +37,25 @@ class Base
         return $response;
 
     }
+
+    public function put($obj)
+    {
+        $request = $this->client->request('PUT', $url, [
+            'auth' => [$this->apiKey, ''],
+            $obj,
+        ]);
+
+        $response = json_decode($request->getBody(), true);
+        return $response;
+    }
+
+    public function delete()
+    {
+        $request = $this->client->request('DELETE', $url, [
+            'auth' => [$this->apiKey, ''],
+        ]);
+
+        $response = json_decode($request->getBody(), true);
+        return $response;
+    }
 }
