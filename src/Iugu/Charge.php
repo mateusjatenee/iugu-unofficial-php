@@ -6,7 +6,7 @@ use mateusjatenee\Base;
 
 class Charge extends Base
 {
-    public function charge($data)
+    public function chargeCustomer($data)
     {
         return $this->get('charge', $data);
     }
