@@ -38,7 +38,7 @@ class Base
 
     }
 
-    public function put($obj)
+    public function put($url, $obj)
     {
         $request = $this->client->request('PUT', $url, [
             'auth' => [$this->apiKey, ''],
@@ -49,7 +49,7 @@ class Base
         return $response;
     }
 
-    public function delete()
+    public function delete($url)
     {
         $request = $this->client->request('DELETE', $url, [
             'auth' => [$this->apiKey, ''],
